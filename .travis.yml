@@ -6,4 +6,4 @@ before_install:
   - docker build -t lastaw/docker-react -f Dockerfile.dev .
 
 script:
-  - npm run test
+  - docker run -e CI=true lastaw/docker-react npm run test
